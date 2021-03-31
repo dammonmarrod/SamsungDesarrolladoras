@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML File</title>
+	<script type="text/javascript" src="apiFileJs.js"></script>
+	<style>
+		.thumb {
+			height: 75px;
+			border: 1px solid #000;
+			margin: 10px 5px 0 0;
+		}
+</style>
+</head>
+<body>
+	<h3>Carga de ficheros</h3>
+	<input type="file" id="files" name="files[]" multiple onchange="handleFileSelect(event)" />
+	<output id="list"></output>
+</body>
+</html>

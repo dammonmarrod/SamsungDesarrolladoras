@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 Video</title>
+</head>
+<body>
+<!--HTML5 Video básico -->
+<video controls
+	src="video.mp4"
+	poster="https://peach.blender.org/wp-content/themes/bf-bunny/graphics/header1.jpg"
+	width="620">
+	El reproductor que estás usando no permite reproducir este contenido,
+	puedes descargarlo en
+	<a href="https://archive.org/details/BigBuckBunny_124"></a>
+</video>
+
+<!--HTML5 Video con botones -->
+<video id="video"
+	src="video.mp4"
+	poster="https://peach.blender.org/wp-content/themes/bf-bunny/graphics/header1.jpg"
+	width="620">
+	<track label="Español" kind="subtitles" srclang="es" src="subtituloses.vtt" default>
+	El reproductor que estás usando no permite reproducir este contenido,
+	puedes descargarlo en
+	<a href="https://archive.org/details/BigBuckBunny_124"></a>
+</video>
+
+<div>
+	<button onclick="document.getElementById('video').play();">Reproducir</button>
+	<button onclick="document.getElementById('video').pause();">Pausa</button>
+	<button onclick="document.getElementById('video').volume += 0.1;">Subir Volumen</button>
+	<button onclick="document.getElementById('video').volume -= 0.1;">Bajar Volumen</button>
+</div>
+
+<!--HTML5 Video con diferentes tipos de videos -->
+<video id="video" controls>
+	<source src="exampleWebMediaVideo.webm" type=video/webm>
+	<source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>
+	<source	src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4> 
+	<source src=http://techslides.com/demos/sample-videos/small.3gp	type=video/3gp>
+	<p>Navegador no soportado</p>
+</video>
+
+<div>
+	<button onclick="document.getElementById('video').play();">Reproducir</button>
+	<button onclick="document.getElementById('video').pause();">Pausa</button>
+	<button onclick="document.getElementById('video').volume +=	0.1;">Subir Volumen</button>
+	<button onclick="document.getElementById('video').volume -=	0.1;">Bajar Volumen</button>
+</div>
+
+<!--HTML5 Video con subtitulos -->
+<video controls
+	src="video.mp4"
+	poster="https://peach.blender.org/wp-content/themes/bf-bunny/graphics/header1.jpg"
+	width="620">
+	<track label="Español" kind="subtitles" srclang="es" src="subtituloses.vtt" default>
+	El reproductor que estás usando no permite reproducir este contenido,
+	puedes descargarlo en
+	<a href="https://archive.org/details/BigBuckBunny_124"></a>
+</video>
+
+
+</body>
+</html>

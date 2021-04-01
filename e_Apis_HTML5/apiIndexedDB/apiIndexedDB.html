@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="borrarJs.js"></script>
+</head>
+<body>
+	<h3>Ejemplo indexedDB</h3>
+	<label>Nombre: </label><input id="nombre">
+	<label>Codigo: </label><input id="codigo">
+	<label>Población: </lab0el><input id="poblacion">
+	<p></p>
+
+	<button onclick="insertarProvincia(nombre.value,codigo.value,poblacion.value)">Insertar provincia</button>
+	<button onclick="getProvincia()">Recuperar provincia</button>
+	<button onclick="getProvincias()">Recuperar Todas las provincias</button>
+	<p></p>
+
+	<label>Id: </label><input id="identificador">
+	<p></p>
+
+	<button onclick="deleteProvincia(identificador.value)">Borrar provincia</button>
+	<button onclick="deleteProvincias()">Borrar Todas las provincias</button>
+
+</body>
+</html>
+

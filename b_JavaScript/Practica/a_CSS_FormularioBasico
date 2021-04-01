@@ -1,0 +1,42 @@
+body{
+	background-color: #dcdad9;
+	background-attachment: scroll;
+}
+h1{
+	color: blue;
+	text-align: center;
+	text-shadow: 2px 2px 2px yellow;
+
+}
+.campoFielset{
+	background-color: #17bbd0;
+}
+
+#datosBancarios, #datosPersonales, #datosContratacion, #datosEstadisticos{
+	font-weight: bold;
+	background-color: red;
+	font-size: 20px;
+	color: white;
+}
+input{
+	background: yellow;
+	border-radius: 5px;
+	
+}	
+.parrafo{
+	margin: 0em;
+}
+#compañiaTelefonica{
+	margin-right: 50px;
+}
+#fechaCumplimentado{
+	background: white;
+}
+#enviarDatos,#borrarDatos{
+	background: grey;
+}
+
+#mostrarValoracion, #mostrarCuenta, #mostrarDiaSemana{
+	background: #f59ae7;
+	font-size: 20px;
+}

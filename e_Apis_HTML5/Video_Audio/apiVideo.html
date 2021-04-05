@@ -3,17 +3,66 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML5 Video</title>
+	<style type="text/css">
+		.seccionvideo3, .video3{
+			width: 300px;
+			margin: 20px auto;
+			background-color: black;
+		}
+	</style>
 </head>
 <body>
+
+
+<!--Formatos que soportan los navegadores web: mp4 (sujeto a licencia compercial), ogg(formato libre),webm -->
+<!--Atributos
+	controls(muestra botones por defecto)
+	poster="incluir imagen jpeg antes de empezar a reproducirse"
+	scr="especificaremos la ruta donde esta alojado el video"
+	<source ="para poner el mismo video en diferentes formatos">
+	autoplay (hace que se reproduzca automaticamente al cargarse la página) Siempre después de controls
+	loop (permite especificar si al llegar al final se vuelve a reproducir)
+	tamaño: aparecerá el que tenga por defecto 
+	width="anchura" //Si no se le da heigth lo adapta en proporción
+	heigth="altura"
+	 -->
+	
 <!--HTML5 Video básico -->
-<video controls
+<section class="video1">
+	<video 
 	src="video.mp4"
-	poster="https://peach.blender.org/wp-content/themes/bf-bunny/graphics/header1.jpg"
-	width="620">
-	El reproductor que estás usando no permite reproducir este contenido,
-	puedes descargarlo en
-	<a href="https://archive.org/details/BigBuckBunny_124"></a>
-</video>
+	controls 
+	>
+	</video>
+</section>
+	
+	
+<section class="video2">
+	<video 
+	src="video.mp4"
+	controls
+	autoplay 
+	loop 
+	>
+	</video>
+</section>	
+	
+<!--Si queremos que se tener el mismo video en varios formatos, por si acaso un navegador no admite un determinado formato de video -->
+<section class="seccionvideo3">
+	<video class="video3" id="video3" 
+	controls
+	poster="imagen4.jpg" 
+	>
+	<source src="video.mp4" type="video/mp4">
+	<source src="video.webm" type="video/webm">
+	</video>
+
+</section>	
+
+	
+	
+	
+	
 
 <!--HTML5 Video con botones -->
 <video id="video"
@@ -33,21 +82,7 @@
 	<button onclick="document.getElementById('video').volume -= 0.1;">Bajar Volumen</button>
 </div>
 
-<!--HTML5 Video con diferentes tipos de videos -->
-<video id="video" controls>
-	<source src="exampleWebMediaVideo.webm" type=video/webm>
-	<source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg>
-	<source	src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4> 
-	<source src=http://techslides.com/demos/sample-videos/small.3gp	type=video/3gp>
-	<p>Navegador no soportado</p>
-</video>
 
-<div>
-	<button onclick="document.getElementById('video').play();">Reproducir</button>
-	<button onclick="document.getElementById('video').pause();">Pausa</button>
-	<button onclick="document.getElementById('video').volume +=	0.1;">Subir Volumen</button>
-	<button onclick="document.getElementById('video').volume -=	0.1;">Bajar Volumen</button>
-</div>
 
 <!--HTML5 Video con subtitulos -->
 <video controls

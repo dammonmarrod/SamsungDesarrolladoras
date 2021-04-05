@@ -1,0 +1,91 @@
+<style>
+	nav{
+		margin: 5px 0; 
+	}
+	.botones{
+		float:left;
+		width:100px;
+		height:20px;
+	}
+	.barra{
+		background: white;
+		width: 600px;
+		height: 16px;
+		border:1px solid black;
+		padding:3px;
+		margin-left:80px;
+		
+	}
+	.progreso{
+		position: absolute;
+		width: 0px;
+		height: 16px;
+		background: rgba(0,0,150,2);
+	}
+
+</style>
+<script>
+	window.onload=function(){
+	var mivideo= document.getElementById("mivideo");
+	var reproducir= document.getElementById("reproducir");
+	var progreso =document.getElementById("progreso");
+	var barra=document.getElementById("barra");
+	
+	reproducir.addEventListener("click", comenzar);
+	progreso.addEventListener("click", barraprogreso);
+	
+	}
+
+	function comenzar(posicion){
+		if(mivideo.paused==false && mivideo.ended==false){//Si el video no esta parado o finalizado
+			mivideo.pause();
+			reproducir.innerHTML="Play";
+			//offsetLeft: indica la distancia que hay desde el borde izquierdo hasta donde esta el elemento
+			var ratonX=posicion.pageX-barra.offsetLeft;
+		}
+		else{//Si el video esta parado
+			mivideo.play();
+			reproducir.innerHTML="Pause";
+			setInterval(barraprogreso,500);//para llamar a la función 1 vez por medio segundo mostrando el progreso de la barra
+			//Se seguiran haciendo llamadas aunque este parado el video, pero la barra no crece más porque el video esta siempre parada en el mismo currentTime
+		}
+	}
+
+	function barraprogreso(){
+		if(mivideo.ended==false){//si el video no esta finalizado
+
+			var maximo=600; //El ancho de la barra es de 600px y esto equivale a cada px
+			//con duration obtenemos la duración total del video
+			//con currentTime obtenemos el segundo concreto en el que nos encontramos al reproducir el video
+			/*el valor de estado Video sera la regla de matematicas si 600 es igual a duration
+			cual será el valor del estadoVideo en un segundo determinado dado por currentTime.
+			*/
+			var estadoVideo=parseInt(mivideo.currentTime*maximo/mivideo.duration);//pasa a entero un valor numérico
+			progreso.style.width=estadoVideo + "px"; //va modificando el ancho de los pixeles de la barra de estado mientras que se reproduce el video y se va mostrando su background`
+		}
+	}
+
+	
+</script>
+
+<section class="mivideo">
+<video id="mivideo" 
+	src="https://videos.pond5.com/sea-boat-sky-aerial-sunset-footage-051067930_main_xl.mp4" 
+	width ="720" 
+	loop>
+</video>
+
+<nav>
+	<div class="botones" id="botones">
+		<button type="button" id="reproducir">Play</button>
+
+	</div>
+	<div class="barra" id="barra">
+		<div class="progreso" id="progreso"> </div> 
+
+	</div>
+</nav>
+
+</section>
+
+

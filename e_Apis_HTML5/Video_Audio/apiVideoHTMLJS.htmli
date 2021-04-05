@@ -1,0 +1,85 @@
+https://www.youtube.com/watch?v=q_j7FAKH96k&list=PLU8oAlHdN5BnX63lyAeV0LzLnpGudgRrK&index=18
+
+<style>
+	nav{
+		margin: 5px 0; 
+	}
+	.botones{
+		float:left;
+		width:100 px;
+		height:20px;
+	}
+	.barra{
+		background: white;
+		width: 600px;
+		heigth: 16px;
+		border:1px solid black;
+		padding:3px;
+		margin-left:100px;
+		
+	}
+	.progreso{
+		position: absolute;
+		width: 0px;
+		height: 16px;
+		background: rgba(0,0,150,2);
+	}
+
+</style>
+<script>
+	window.onload=function(){
+	var mivideo= document.getElementById("mivideo");
+	var reproducir= document.getElementById("reproducir");
+	var progreso =document.getElementById("progreso");
+	var barra=document.getElementById("barra");
+	
+	reproducir.addEventListener("click", comenzar);
+	progreso.addEventListener("click", barraprogreso);
+	
+	}
+
+	function comenzar(){
+		if(mivideo.paused==false && mivideo.ended==false){
+			mivideo.pause();
+			reproducir.innerHTML="Play";
+		}
+		else{
+			mivideo.play();
+			reproducir.innerHTML="Pause";
+		}
+	}
+
+	function barraprogreso(){
+
+	}
+
+	
+</script>
+
+<section class="mivideo">
+<video id="mivideo" width ="720" loop>
+</video>
+
+<nav>
+	<div class="botones" id="botones">
+		<button type="button" id="reproducir">Play</button>
+
+	</div>
+	<div class="barra" id="barra">
+		<div class="progreso" id="progreso"> </div> 
+
+	</div>
+</nav>
+
+</section>
+
+
+<!--Propiedades de la etiqueta video -->
+duration: duracción del video.
+currentTime: tiempo actual del video
+paused: video pausado
+ended: video finalizado
+
+<!--Métodos de la etiqueta video -->
+play()
+pause()

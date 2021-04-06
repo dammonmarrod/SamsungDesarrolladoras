@@ -17,8 +17,6 @@ window.onload=function(){
 function obtenerdatos(e){
 	console.log("dentro de obtenerdatos");
 	var files = e.target.files;;//nos devuelve los archivos seleccionados después de pulsar el botón
-	console.log(e.target.files);
-	console.log(files.file.name);
 	//se almacenarán en un array
 	//como en este caso no ponemos multiple, solo podremos subir uno
 	console.log(files);

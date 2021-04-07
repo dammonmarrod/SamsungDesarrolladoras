@@ -28,7 +28,7 @@ function obtenerdatos(e){
 	//para acceder al archivo
 	var archivoSeleccionado=files[0];
 	console.log("el tipo de archivo es: " + archivoSeleccionado.type);
-	if(!archivoSeleccionado.type.match(/imagen/)){//comprueba si el archivo es diferente de una imagen
+	if(!archivoSeleccionado.type.match(/image/)){//comprueba si el archivo es diferente de una imagen
 		alert("Debes seleccionar una imagen, archivo erroneo.");
 	}
 	else{

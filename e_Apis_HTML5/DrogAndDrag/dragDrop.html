@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Drag and Drop</title>
+	<style type="text/css">
+		#div1, #div2 {
+			  float: left;
+			  width: 100px;
+			  height: 35px;
+			  margin: 10px;
+			  padding: 10px;
+			  border: 1px solid black;
+			}
+	</style>
+	<script type="text/javascript" src="w_dragDrop_Js.js"></script>
+</head>
+<body>
+	<h1>Drag the image back and forth between the two div elements.</h2>
+	<div>
+	<pre>
+	Code explained:
+		Call preventDefault() to prevent the browser default
+		handling of the data (default is open as link on drop)
+    		Get the dragged data with the dataTransfer.getData() method.
+    		This method will return any data that was set to the 
+    		same type in the setData() method
+   				The dragged data is the id of the dragged element ("drag1")
+    				Append the dragged element into the drop element.
+
+    	</pre>
+	</div>
+
+	<div id="div1"></div>
+	<!--Hacer una imagen dragable  <img draggable="true">-->
+	<img src="vue_js.png" width="50" height="69" id="drag1">
+
+	<div id="div2"></div>
+
+	
+
+
+
+</body>
+</html>

@@ -10,3 +10,38 @@
   "author": "",
   "license": "ISC"
 }
+
+/*
+En este “package.json” se pueden ver los datos fundamentales que aparecen sobre un paquete:
+
+name: Nombre del paquete. Sirve para referenciar al mismo en búsquedas o instalaciones.
+
+version: Versión del paquete.
+Con el paso del tiempo se van generando nuevas versiones de los paquetes. 
+Con este número de versión se puede hacer referencia a una versión concreta del paquete. 
+Normalmente, se utiliza un convenio semántico de numeración utilizando “major.minor.patch”, por ejemplo: 2.1.3. 
+•	El primer número, “major”, se incrementa cuando hay cambios en el API de la aplicación, que la hace incompatible con versiones anteriores. 
+•	El segundo número, “minor”, indica que se añaden funcionalidades, pero que son compatibles con versiones anteriores de la misma. 
+•	El último número, “patch”, se incrementa cuando se realizan correcciones y pequeñas mejoras, compatibles también con versiones anteriores.
+
+description: Espacio reservado para describir brevemente el paquete.
+
+main: Fichero principal de la aplicación, en este caso “hola.js”. Este fichero es el que será cargado si se utiliza desde otro paquete.
+
+
+scripts: Sección donde se pueden definir distintas formas de ejecutar el paquete, realizar tests, etc. 
+Por defecto se crea un test vacio. Se puede ejecutar utilizando el comando “npm run test”..
+
+keywords: Palabras clave que definen el paquete, son útiles para poder categorizarlos y encontrarlos más fácilmente.
+
+author: Autor del paquete. Se suele utilizar el formato:
+Nombre Apellido <Email> (Página web)
+
+
+license: Iniciales de la licencia que se aplica al paquete. 
+Es importante dar a conocer a los usuarios las limitaciones que puedan aplicarse al uso de cada paquete.
+
+
+
+
+*/

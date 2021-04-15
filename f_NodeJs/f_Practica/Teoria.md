@@ -80,8 +80,36 @@ En consola escribimos para ver todos los script disponibles npm run
 En consola escribimos para ejecutar automáticamente npm start para ejecutar el main
 
  
+ 5. Instalamos nodemon
+ Para que se actualice cada vez que cambia algo
+ npm install nodemon -D (para decirle que es una dependencia de desarrollo)
+ modificamos el pacakge.json para introducirlo en un script
+ {
+  "name": "practicaNode_Express_Mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon main.js",
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
+
  
- 5. Creamos nuesta API  
+ 
+ 
+ ejecutamos en el terminal
+ npm run dev
+ 
+ 
+ 6. Creamos nuesta API  
  
  
 

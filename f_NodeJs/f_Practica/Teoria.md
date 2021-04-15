@@ -14,12 +14,74 @@ Se tendrá que entregar el fichero (o ficheros) utilizados para construir el API
 
 
 
-Instalar NodeJs que incluira npm
-Montar un servidor básico 
+1. Instalar NodeJs que incluira npm
+Para comprobar la versión que esta instalado node -v y npm -v
+
+2. Nos creamos el package.json de cada proyecto
+En consola, nos vamos a la carpeta donde queremos trabajar escribimos npm init -y para que nos cree el proyecto de trabajo
+C:\Users\Monica\Desktop\w_NodeJs\practicaNode>npm init -y
+En la carpeta te crea automaticamente en un package.json
+{
+  "name": "practicaNode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
 
 
+3.Montar un servidor básico 
+Creamos un fichero llamado main.js
+
+const http=require('http') //Requerir el interfaz http
+
+const port=3000; //Definir el puerto a utilizar
+
+//Creamos el servidor
+const server=http.createServer((request,response)=>{
+    response.statusCode=200; //Código del estado HTTP que se devuelve
+    response.setHeader('Content-Type', 'text/plain');//Encabezados de la respuesta, texto plano
+    response.end('Hola Mundo');
+
+});//fin del server
+
+//Ejecutamos el servicio para que permanezca a la espera
+server.listen(port, () =>{
+    console.log("Servidor ejecuntándose....");
+    console.log("Abrir en un navegador http://localhost:3000");
+}
+);//fin del server.listen
 
 
+Para ejecutarlo se usa node main.js
+
+
+4. Configuramos el package.json con Script para facilitar el trabajo
+Modificamos la parte de script
+{
+  "name": "practicaNode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+En consola escribimos para ver todos los script disponibles npm run
+En consola escribimos para ejecutar automáticamente npm start para ejecutar el main
+
+ 
+ 
+ 5. Creamos nuesta API  
  
  
 

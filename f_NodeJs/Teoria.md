@@ -23,7 +23,9 @@ Node.js Extension pack Para trabajar con node desde el terminal
 https://marketplace.visualstudio.com/items?itemName=waderyan.nodejs-extension-pack
 Npm Ayuda con el manejo y reconocimiento de npm
 https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script
-
+Nodemon: permite resetear la aplicación si detecta  algún tipo de cambio
+https://www.npmjs.com/package/nodemon
+SIEMPRE SE DEBE INSTALAR DE FORMA LOCAL npm install nodemon -D (con -D le decimos que es una dependencia de desarrollo
 ____________________________________________________________________________________________________________________________________________________________
 
 Intalación de mongoDb

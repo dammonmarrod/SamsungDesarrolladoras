@@ -15,7 +15,7 @@ node hola.js
 
 
 Si se abre en un navegador la dirección http://localhost:3000, se verá la respuesta
-
+_____________________________________________________________________________________________________________________________________________________________
 
 
 Plugins recomendados Visual Studio Code
@@ -24,6 +24,7 @@ https://marketplace.visualstudio.com/items?itemName=waderyan.nodejs-extension-pa
 Npm Ayuda con el manejo y reconocimiento de npm
 https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script
 
+____________________________________________________________________________________________________________________________________________________________
 
 Intalación de mongoDb
 https://victorroblesweb.es/2019/05/14/instalacion-de-mongodb-paso-a-paso-2019/

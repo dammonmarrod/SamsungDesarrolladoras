@@ -31,3 +31,8 @@ https://victorroblesweb.es/2019/05/14/instalacion-de-mongodb-paso-a-paso-2019/
 https://www.youtube.com/watch?v=gkCnXcxHC4o&feature=emb_logo
 Instalacion de Postman
 https://www.postman.com/
+
+
+____________________________________________________________________________________________________________________________________________________________
+Tipos de contentTypes/Lista completa de tipos MIME
+https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types

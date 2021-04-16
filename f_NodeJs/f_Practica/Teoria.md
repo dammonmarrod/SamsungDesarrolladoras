@@ -116,6 +116,12 @@ npm install mongodb
 Esto  instalará  localmente  la  última  versión  estable  del  conector  junto  con  sus  dependencias,   dentro   de   la   carpeta   “node_modules”,   como   ya   se   ha   visto   anteriormente.
  
  
+ 7. Nos instalamos el framework express
+ Permite crear un servidor que  va a poder tener diferentes rutas, para que cada una realice diferentes tareas
+ https://github.com/expressjs/express
+ Se usa el comando (es una dependencia de producción, así que ira sin -d)
+ npm install express
+ 
  
  
  

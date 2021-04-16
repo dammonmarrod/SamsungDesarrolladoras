@@ -102,11 +102,21 @@ En consola escribimos para ejecutar automáticamente npm start para ejecutar el 
   }
 }
 
+ejecutamos en el terminal
+npm run dev
+ 
+ 
+6. Instalamos mongodb
+La  instalación  completa, con  las  opciones  por  defecto,  es  la  se  utilizará  en  este  curso. Además del cliente y el servidor de MongoDB, se instalará un interfaz gráfico para facilitar el uso y la gestión de las bases de datos.
+https://www.mongodb.com/download-center/community
+
+En la carpeta del proyecto
+Existen  varios  conectores  para  poder  utilizar  bases  de  datos  MongoDB  desde  Node.js. En este caso, se utilizará el conector oficial de MongoDB para Node.js.Para  instalar  el  conector,  basta  con  situarse  con  el  terminal  en  la  carpeta  del  proyecto y ejecutar:
+npm install mongodb
+Esto  instalará  localmente  la  última  versión  estable  del  conector  junto  con  sus  dependencias,   dentro   de   la   carpeta   “node_modules”,   como   ya   se   ha   visto   anteriormente.
  
  
  
- ejecutamos en el terminal
- npm run dev
  
  
  6. Creamos nuesta API  
